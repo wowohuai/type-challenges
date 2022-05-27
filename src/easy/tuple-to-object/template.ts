@@ -3,6 +3,8 @@
 
  */
 
-type TupleToObject<T extends readonly any[]> = {
-  [K in keyof T]: T[K];
+type s = keyof any;
+
+type TupleToObject<T extends readonly (keyof any)[]> = {
+  [P in T[number]]: P;
 };
