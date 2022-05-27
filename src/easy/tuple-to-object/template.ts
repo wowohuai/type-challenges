@@ -6,5 +6,6 @@
 type s = keyof any;
 
 type TupleToObject<T extends readonly (keyof any)[]> = {
+  // T[number] -> 遍历数组
   [P in T[number]]: P;
 };
